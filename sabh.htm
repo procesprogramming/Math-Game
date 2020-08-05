@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="sabj.js"></script>
+<link rel="stylesheet" type="text/css" href="sabc.css">
+<title>Addition game project</title>
+</head>
+<body>
+<div id="canvas">
+<div id="1-div">
+<h1 id="number-1">1</h1>
+</div>
+<h1 id="plus">+</h1>	
+<div id="2-div">
+<h1 id="number-2">2</h1>	
+</div>
+<h1 id="eoples">=</h1>
+<form>
+<input type="number" id="result">
+</form>
+<button id="submit">Check</button>
+</div>
+<script>
+var lups = document.getElementById('plus');
+var but = document.getElementById('submit'); // od button-a	
+var inp = document.getElementById('result').value; // od input-a
+var nmb1 = document.getElementById('number-1'); // dva polja za random brojeve
+var nmb2 = document.getElementById('number-2');
+
+var rnmb1 = Math.floor(Math.random() * 50);
+var rnmb2 = Math.floor(Math.random() * 15); // dva random broja
+// random operacije
+var rez1 = rnmb1 + rnmb2;
+var rez2 = rnmb1 - rnmb2;
+var rez3 = rnmb1 * rnmb2;
+var rez4 = rnmb1 / rnmb2;
+
+var operation = ['+', '-', '/', '*']; // operacije
+var math = operation[Math.floor(Math.random() * operation.length)];
+
+lups.innerHTML = math;
+nmb1.innerHTML = rnmb1;
+nmb2.innerHTML = rnmb2; // dodajem math random u html polja
+
+but.addEventListener('click', function () {
+var inp = document.getElementById('result').value;	
+inp = Number(inp);  // ovdje pretvaram tekst u broj
+// ovdje dodjeljujemo vrijednost operacijama
+        if(math === '+') {
+           if(inp === rez1) {
+          	 alert('correct');
+          	 window.location.reload();
+            } 
+            	} 
+        	else if (math === '-') {
+           	if(inp === rez2) {
+             		alert('correct');
+             		window.location.reload();
+                    }
+                }
+           	else if (math === '*') {
+            if(inp === rez3) {
+             		alert('correct');
+             		window.location.reload();
+                    }
+                }
+          	else if (math === '/') {
+            if(inp === rez4) {
+            	alert('correct');
+             		window.location.reload();
+                    }
+                } 
+               if(inp != rez1) {
+               	  alert('sorry.Incorect.Result is: ' + rez1);
+               	  	window.location.reload();
+               } 
+                  else if(inp != rez2) {
+               	  alert('sorry.Incorect.Result is: ' + rez2);
+               	  	window.location.reload();
+               } 
+                 else if(inp != rez3) {
+               	  alert('sorry.Incorect.Result is: ' + rez3);
+               	  	window.location.reload();
+               } 
+                 else if(inp != rez4) {
+               	  alert('sorry.Incorect.Result is: ' + rez4);
+               	  	window.location.reload();
+               } 
+});
+</script>
+</body>
+</html>

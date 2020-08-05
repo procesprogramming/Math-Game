@@ -1,0 +1,47 @@
+html,body {
+	background-color: lightskyblue;
+}
+#number-1 {
+  border: 5px solid green;	
+   padding: 35px; 
+  margin-right: 60px;
+}
+#eoples {
+	margin-top: 8%;
+	margin-right: 5px;
+}
+#number-2 {
+	 border: 5px solid blue;	
+   padding: 35px; 
+  margin-right: 60px;
+}
+#plus {
+	margin-top: 8%;
+	margin-right: 60px;
+}
+#submit {
+	margin-top: 46px;
+	width: 30%;
+	height: 10%;
+	padding: 10px;
+	background-color: red;
+	color: white;
+}
+#cs {
+	display: flex;
+}
+#result {
+	margin-right: 15px;
+	margin-top: 46px;
+	border: 3px solid cyan;
+	text-align: center;
+	height: 27%;
+}
+#canvas {
+	padding: 90px;
+	width: 50%;
+	background-color: yellow;
+	margin-top: 5%;
+	margin-left: 27%;
+	display: flex;
+}
